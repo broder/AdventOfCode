@@ -1,4 +1,5 @@
-## --- Day 4: High-Entropy Passphrases ---
+\-\-\- Day 4: High-Entropy Passphrases ---
+------------------------------------------
 
 A new system policy has been put in place that requires all accounts to use a _passphrase_ instead of simply a pass_word_. A passphrase consists of a series of words (lowercase letters) separated by spaces.
 
@@ -12,7 +13,8 @@ For example:
 
 The system's full passphrase list is available as your puzzle input. _How many passphrases are valid?_
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 For added security, yet another system policy _(Because as everyone knows, the number of rules is proportional to the level of security.)_ has been put in place. Now, a valid passphrase must contain no two words that are anagrams of each other - that is, a passphrase is invalid if any word's letters can be rearranged to form any other word in the passphrase.
 

@@ -1,4 +1,5 @@
-## --- Day 6: Memory Reallocation ---
+\-\-\- Day 6: Memory Reallocation ---
+-------------------------------------
 
 A debugger program here is having an issue: it is trying to repair a memory reallocation routine, but it keeps getting stuck in an infinite loop.
 
@@ -21,7 +22,8 @@ At this point, we've reached a state we've seen before: `2 4 1 2` was already se
 
 Given the initial block counts in your puzzle input, _how many redistribution cycles_ must be completed before a configuration is produced that has been seen before?
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 Out of curiosity, the debugger would also like to know the size of the loop: starting from a state that has already been seen, how many block redistribution cycles must be performed before that same state is seen again?
 

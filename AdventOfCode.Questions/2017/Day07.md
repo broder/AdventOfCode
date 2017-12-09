@@ -1,4 +1,5 @@
-## --- Day 7: Recursive Circus ---
+\-\-\- Day 7: Recursive Circus ---
+----------------------------------
 
 Wandering further through the circuits of the computer, you come upon a tower of programs _(Turtles, all the way down.)_ that have gotten themselves into a bit of trouble. A recursive algorithm has gotten out of hand, and now they're balanced precariously in a large tower.
 
@@ -21,6 +22,7 @@ For example, if your list is the following:
     ugml (68) -> gyxo, ebii, jptl
     gyxo (61)
     cntj (57)
+    
 
 ...then you would be able to recreate the structure of the towers that looks like this:
 
@@ -41,12 +43,14 @@ For example, if your list is the following:
              fwft - cntj
                   \     
                     xhth
+    
 
 In this example, `tknk` is at the bottom of the tower (the _bottom program_), and is holding up `ugml`, `padx`, and `fwft`. Those programs are, in turn, holding up other programs; in this example, none of those programs are holding up any other programs, and are all the tops of their own towers. (The actual tower balancing in front of you is much larger.)
 
 Before you're ready to help them, you need to make sure your information is correct. _What is the name of the bottom program?_
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 The programs explain the situation: they can't get down. Rather, they _could_ get down, if they weren't expending all of their energy trying to keep the tower balanced. Apparently, one program has the _wrong weight_, and until it's fixed, they're stuck here.
 
@@ -56,9 +60,9 @@ In the example above, this means that for `ugml`'s disc to be balanced, `gyxo`, 
 
 However, for `tknk` to be balanced, each of the programs standing on its disc _and all programs above it_ must each match. This means that the following sums must all be the same:
 
-*   `ugml` + (`gyxo` + `ebii` + `jptl`) = 68 + (61 + 61 + 61) = 251
-*   `padx` + (`pbga` + `havc` + `qoyq`) = 45 + (66 + 66 + 66) = 243
-*   `fwft` + (`ktlj` + `cntj` + `xhth`) = 72 + (57 + 57 + 57) = 243
+*   `ugml` \+ (`gyxo` \+ `ebii` \+ `jptl`) = 68 + (61 + 61 + 61) = 251
+*   `padx` \+ (`pbga` \+ `havc` \+ `qoyq`) = 45 + (66 + 66 + 66) = 243
+*   `fwft` \+ (`ktlj` \+ `cntj` \+ `xhth`) = 72 + (57 + 57 + 57) = 243
 
 As you can see, `tknk`'s disc is unbalanced: `ugml`'s stack is heavier than the other two. Even though the nodes above `ugml` are balanced, `ugml` itself is too heavy: it needs to be `8` units lighter for its stack to weigh `243` and keep the towers balanced. If this change were made, its weight would be `60`.
 

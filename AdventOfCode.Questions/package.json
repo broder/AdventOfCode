@@ -1,0 +1,17 @@
+{
+  "name": "adventofcode.questions",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "fs-extra": "^4.0.3",
+    "jsdom": "^11.5.1",
+    "left-pad": "^1.2.0",
+    "mkdirp-promise": "^5.0.1",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "turndown": "^4.0.0-rc.3",
+    "yargs": "^10.0.3"
+  }
+}

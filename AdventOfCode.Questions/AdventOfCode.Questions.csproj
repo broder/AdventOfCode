@@ -33,6 +33,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="2015\Day01.md" />
+    <Content Include="2015\Day02.md" />
+    <Content Include="2015\Day03.md" />
+    <Content Include="2015\Day04.md" />
+    <Content Include="2015\Day05.md" />
+    <Content Include="2015\Day06.md" />
+    <Content Include="2015\Day07.md" />
+    <Content Include="2015\Day08.md" />
+    <Content Include="2015\Day09.md" />
+    <Content Include="2015\Day10.md" />
+    <Content Include="2015\Day11.md" />
+    <Content Include="2015\Day12.md" />
+    <Content Include="2015\Day13.md" />
+    <Content Include="2015\Day14.md" />
+    <Content Include="2015\Day15.md" />
+    <Content Include="2015\Day16.md" />
+    <Content Include="2015\Day17.md" />
+    <Content Include="2015\Day18.md" />
+    <Content Include="2015\Day19.md" />
+    <Content Include="2015\Day20.md" />
+    <Content Include="2015\Day21.md" />
+    <Content Include="2015\Day22.md" />
+    <Content Include="2015\Day23.md" />
+    <Content Include="2015\Day24.md" />
+    <Content Include="2015\Day25.md" />
+    <Content Include="2016\Day01.md" />
+    <Content Include="2016\Day02.md" />
+    <Content Include="2016\Day03.md" />
+    <Content Include="2016\Day04.md" />
+    <Content Include="2016\Day05.md" />
+    <Content Include="2016\Day06.md" />
+    <Content Include="2016\Day07.md" />
+    <Content Include="2016\Day08.md" />
+    <Content Include="2016\Day09.md" />
+    <Content Include="2016\Day10.md" />
+    <Content Include="2016\Day11.md" />
+    <Content Include="2016\Day12.md" />
+    <Content Include="2016\Day13.md" />
+    <Content Include="2016\Day14.md" />
+    <Content Include="2016\Day15.md" />
+    <Content Include="2016\Day16.md" />
+    <Content Include="2016\Day17.md" />
+    <Content Include="2016\Day18.md" />
+    <Content Include="2016\Day19.md" />
+    <Content Include="2016\Day20.md" />
+    <Content Include="2016\Day21.md" />
+    <Content Include="2016\Day22.md" />
+    <Content Include="2016\Day23.md" />
+    <Content Include="2016\Day24.md" />
+    <Content Include="2016\Day25.md" />
     <Content Include="2017\Day01.md" />
     <Content Include="2017\Day02.md" />
     <Content Include="2017\Day03.md" />
@@ -42,6 +92,8 @@
     <Content Include="2017\Day07.md" />
     <Content Include="2017\Day08.md" />
     <Content Include="2017\Day09.md" />
+    <Content Include="main.js" />
+    <Content Include="package.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

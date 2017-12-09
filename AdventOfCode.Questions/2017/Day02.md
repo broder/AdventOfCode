@@ -1,4 +1,5 @@
-## --- Day 2: Corruption Checksum ---
+\-\-\- Day 2: Corruption Checksum ---
+-------------------------------------
 
 As you walk through the door, a glowing humanoid shape yells in your direction. "You there! Your state appears to be idle. Come help us repair the corruption in this spreadsheet - if we take another millisecond, we'll have to display an hourglass cursor!"
 
@@ -18,7 +19,8 @@ In this example, the spreadsheet's checksum would be `8 + 4 + 6 = 18`.
 
 _What is the checksum_ for the spreadsheet in your puzzle input?
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 "Great work; looks like we're on the right track after all. Here's a _star_ for your effort." However, the program seems a little worried. Can programs _be_ worried?
 

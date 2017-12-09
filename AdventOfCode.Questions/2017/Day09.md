@@ -1,8 +1,9 @@
-## --- Day 9: Stream Processing ---
+\-\-\- Day 9: Stream Processing ---
+-----------------------------------
 
 A large stream blocks your path. According to the locals, it's not safe to cross the stream _("Don't cross the streams!", they yell, even though there's only one. They seem to think they're hilarious.)_ at the moment because it's full of _garbage_. You look down at the stream; rather than water, you discover that it's a _stream of characters_.
 
-You sit for a while and record part of the stream (your puzzle input). The characters represent _groups_ - sequences that begin with `{` and end with `}`. Within a group, there are zero or more other things, separated by commas: either another _group_ or _garbage_. Since groups can contain other groups, a `}` only closes the _most-recently-opened unclosed group_ - that is, they are nestable. Your puzzle input represents a single, large group which itself contains many smaller ones.
+You sit for a while and record part of the stream (your puzzle input). The characters represent _groups_ \- sequences that begin with `{` and end with `}`. Within a group, there are zero or more other things, separated by commas: either another _group_ or _garbage_. Since groups can contain other groups, a `}` only closes the _most-recently-opened unclosed group_ \- that is, they are nestable. Your puzzle input represents a single, large group which itself contains many smaller ones.
 
 Sometimes, instead of a group, you will find _garbage_. Garbage begins with `<` and ends with `>`. Between those angle brackets, almost any character can appear, including `{` and `}`. _Within_ garbage, `<` has no special meaning.
 
@@ -44,7 +45,8 @@ Your goal is to find the total score for all groups in your input. Each group is
 
 _What is the total score_ for all groups in your input?
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 Now, you're ready to remove the garbage.
 

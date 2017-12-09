@@ -1,4 +1,5 @@
-## --- Day 5: A Maze of Twisty Trampolines, All Alike ---
+\-\-\- Day 5: A Maze of Twisty Trampolines, All Alike ---
+---------------------------------------------------------
 
 An urgent interrupt _(Later, on its turn, it sends you a sorcery.)_ arrives from the CPU: it's trapped in a maze of jump instructions, and it would like assistance from any programs with spare cycles to help find the exit.
 
@@ -13,21 +14,23 @@ For example, consider the following list of jump offsets:
     0
     1
     -3
+    
 
 Positive jumps ("forward") move downward; negative jumps move upward. For legibility in this example, these offset values will be written all on one line, with the current instruction marked in parentheses. The following steps would be taken before an exit is found:
 
-*   `(0) 3  0  1  -3 ` - _before_ we have taken any steps.
-*   `(1) 3  0  1  -3 ` - jump with offset `0` (that is, don't jump at all). Fortunately, the instruction is then incremented to `1`.
-*   ` 2 (3) 0  1  -3 ` - step forward because of the instruction we just modified. The first instruction is incremented again, now to `2`.
-*   ` 2  4  0  1 (-3)` - jump all the way to the end; leave a `4` behind.
-*   ` 2 (4) 0  1  -2 ` - go back to where we just were; increment `-3` to `-2`.
-*   ` 2  5  0  1  -2 ` - jump `4` steps forward, escaping the maze.
+*   `(0) 3  0  1  -3 ` \- _before_ we have taken any steps.
+*   `(1) 3  0  1  -3 ` \- jump with offset `0` (that is, don't jump at all). Fortunately, the instruction is then incremented to `1`.
+*   ` 2 (3) 0  1  -3 ` \- step forward because of the instruction we just modified. The first instruction is incremented again, now to `2`.
+*   ` 2  4  0  1 (-3)` \- jump all the way to the end; leave a `4` behind.
+*   ` 2 (4) 0  1  -2 ` \- go back to where we just were; increment `-3` to `-2`.
+*   ` 2  5  0  1  -2 ` \- jump `4` steps forward, escaping the maze.
 
 In this example, the exit is reached in `5` steps.
 
 _How many steps_ does it take to reach the exit?
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 Now, the jumps are even stranger: after each jump, if the offset was _three or more_, instead _decrease_ it by `1`. Otherwise, increase it by `1` as before.
 

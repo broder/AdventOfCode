@@ -1,4 +1,5 @@
-## --- Day 8: I Heard You Like Registers ---
+\-\-\- Day 8: I Heard You Like Registers ---
+--------------------------------------------
 
 You receive a signal _(There's that sorcery I told you about.)_ directly from the CPU. Because of your recent assistance with [jump instructions](5), it would like you to compute the result of a series of unusual register instructions.
 
@@ -8,6 +9,7 @@ Each instruction consists of several parts: the register to modify, whether to i
     a inc 1 if b < 5
     c dec -10 if a >= 1
     c inc -20 if c == 10
+    
 
 These instructions would be processed as follows:
 
@@ -22,6 +24,7 @@ You might also encounter `<=` (less than or equal to) or `!=` (not equal to). Ho
 
 _What is the largest value in any register_ after completing the instructions in your puzzle input?
 
-## --- Part Two ---
+\-\-\- Part Two ---
+-------------------
 
 To be safe, the CPU also needs to know _the highest value held in any register during this process_ so that it can decide how much memory to allocate to these operations. For example, in the above instructions, the highest value ever held was `10` (in register `c` after the third instruction was evaluated).
