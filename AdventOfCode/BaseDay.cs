@@ -21,7 +21,7 @@ namespace AdventOfCode
             Run();
         }
 
-        public void Run()
+        private void Run()
         {
             Console.WriteLine($"{CurrentYear}.{CurrentDay}.1");
             RunPartOne();
@@ -33,21 +33,16 @@ namespace AdventOfCode
             Console.WriteLine("END");
         }
 
-        public abstract void RunPartOne();
-        public abstract void RunPartTwo();
+        protected abstract void RunPartOne();
+        protected abstract void RunPartTwo();
 
-        protected string[] LoadInput(string variant)
+        protected string[] LoadInput(string variant = null)
         {
             var filenameParts = new List<string> {CurrentDay.ToLower(), ".txt"};
             if (!string.IsNullOrWhiteSpace(variant))
                 filenameParts.Insert(1, $".{variant}");
             var filename = string.Join("", filenameParts);
             return File.ReadAllLines($"{Directory.GetCurrentDirectory()}/../../{CurrentYear}/Input/{filename}");
-        }
-
-        protected string[] LoadInput()
-        {
-            return LoadInput(null);
         }
 
         protected static int Mod(int x, int m)

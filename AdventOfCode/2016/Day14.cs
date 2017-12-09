@@ -12,13 +12,13 @@ namespace AdventOfCode._2016
 
         private Dictionary<string, string> CachedMD5;
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetKeyIndex("abc"));
             Console.WriteLine(GetKeyIndex("zpqevtbw"));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetKeyIndex("abc", 2016));
             Console.WriteLine(GetKeyIndex("zpqevtbw", 2016));

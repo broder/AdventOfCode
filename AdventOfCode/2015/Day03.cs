@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day03 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetHousesVisited(">", 1));
             Console.WriteLine(GetHousesVisited("^>v<", 1));
@@ -50,7 +50,7 @@ namespace AdventOfCode._2015
             return housesVisited;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetHousesVisited(">", 2));
             Console.WriteLine(GetHousesVisited("^>v<", 2));

@@ -5,7 +5,7 @@ namespace AdventOfCode._2016
 {
     internal class Day03 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetHorizontalTriangesFromFile());
         }
@@ -16,7 +16,7 @@ namespace AdventOfCode._2016
             return lines.Count(line => IsTriangle(line.Substring(2, 3), line.Substring(7, 3), line.Substring(12, 3)));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetVerticalTrianglesFromFile());
         }

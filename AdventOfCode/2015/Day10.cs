@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day10 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetResultLength(1, 1));
             Console.WriteLine(GetResultLength(1, 2));
@@ -47,7 +47,7 @@ namespace AdventOfCode._2015
             return value.Length;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetResultLength(1113122113, 50));
         }

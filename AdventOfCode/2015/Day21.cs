@@ -7,7 +7,7 @@ namespace AdventOfCode._2015
 {
     internal class Day21 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(PlayerWins(new Person {HitPoints = 8, Damage = 5, Armour = 5},
                 new Person {HitPoints = 12, Damage = 7, Armour = 2}));
@@ -113,7 +113,7 @@ namespace AdventOfCode._2015
             return player.HitPoints > 0;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMinimumGoldSpend(true));
         }

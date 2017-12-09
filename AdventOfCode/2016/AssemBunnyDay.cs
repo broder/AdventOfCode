@@ -134,12 +134,12 @@ namespace AdventOfCode._2016
             return RegisterNames.Contains(input) ? registers[input[0] - 'a'] : int.Parse(input);
         }
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             throw new NotImplementedException();
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             throw new NotImplementedException();
         }

@@ -8,12 +8,12 @@ namespace AdventOfCode._2016
         private static readonly Regex NodeRegex = new Regex(
             @"/dev/grid/node-x(\d*?)-y(\d*?)\s*?(\d*?)T\s*?(\d*?)T\s*?(\d*?)T\s*?(\d*?)\%");
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetViablePairs(35, 29));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             PrintGrid(3, 3, "practice");
             PrintGrid(35, 29);

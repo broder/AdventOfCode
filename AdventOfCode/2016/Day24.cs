@@ -7,7 +7,7 @@ namespace AdventOfCode._2016
 {
     internal class Day24 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetShortestRoute(5, false, "practice"));
             Console.WriteLine(GetShortestRoute(8));
@@ -97,7 +97,7 @@ namespace AdventOfCode._2016
             return !distances.Any(d => d == 0);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetShortestRoute(8, true));
         }

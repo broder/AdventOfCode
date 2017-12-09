@@ -14,7 +14,7 @@ namespace AdventOfCode._2015
         private readonly Regex JumpOneRegex = new Regex(@"jio (.+?), ([-+\d]+)$");
         private readonly string[] RegisterNames = {"a", "b"};
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetRegisterValue(0, 0, "practice"));
             Console.WriteLine(GetRegisterValue(1));
@@ -72,7 +72,7 @@ namespace AdventOfCode._2015
             return RegisterNames.Contains(input) ? registers[input[0] - 'a'] : int.Parse(input);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetRegisterValue(1, 1));
         }

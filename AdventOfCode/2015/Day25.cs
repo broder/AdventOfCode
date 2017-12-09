@@ -4,7 +4,7 @@ namespace AdventOfCode._2015
 {
     internal class Day25 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetValueFromGrid(3, 4, 1L, i => i + 1L));
             Console.WriteLine(GetValueFromGrid(3010, 3019, 20151125L, i => i * 252533 % 33554393));
@@ -34,7 +34,7 @@ namespace AdventOfCode._2015
             }
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
         }
     }

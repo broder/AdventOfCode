@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day18 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetNumberOfLightsOnAfterSteps(4, false, "practice"));
             Console.WriteLine(GetNumberOfLightsOnAfterSteps(100));
@@ -52,7 +52,7 @@ namespace AdventOfCode._2015
             return lights.Cast<bool>().Count(b => b);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetNumberOfLightsOnAfterSteps(5, true, "practice"));
             Console.WriteLine(GetNumberOfLightsOnAfterSteps(100, true));

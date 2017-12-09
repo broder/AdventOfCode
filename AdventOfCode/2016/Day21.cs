@@ -14,7 +14,7 @@ namespace AdventOfCode._2016
         private readonly Regex ReverseRegex = new Regex(@"reverse positions (.*?) through (.*?)$");
         private readonly Regex MoveRegex = new Regex(@"move position (.*?) to position (.*?)$");
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetPassword("abcde", "practice"));
             Console.WriteLine(GetPassword("abcdefgh"));
@@ -129,7 +129,7 @@ namespace AdventOfCode._2016
             return new string(arr);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetUnscrambledInput("fbgdceah"));
         }

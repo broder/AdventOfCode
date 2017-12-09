@@ -6,7 +6,7 @@ namespace AdventOfCode._2016
 {
     internal class Day07 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(IsTlsIp("abba[mnop]qrst"));
             Console.WriteLine(IsTlsIp("abcd[bddb]xyyx"));
@@ -31,7 +31,7 @@ namespace AdventOfCode._2016
                    !ip.Supernets.Any(s => abbas.Any(s.Contains));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(IsSslIp("aba[bab]xyz"));
             Console.WriteLine(IsSslIp("xyx[xyx]xyx"));

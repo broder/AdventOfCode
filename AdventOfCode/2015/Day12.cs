@@ -7,7 +7,7 @@ namespace AdventOfCode._2015
 {
     internal class Day12 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(SumJson("[1,2,3]"));
             Console.WriteLine(SumJson("{\"a\":2,\"b\":4}"));
@@ -47,7 +47,7 @@ namespace AdventOfCode._2015
             return val.Type == JTokenType.Integer ? (long) val.Value : 0L;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(SumJson("[1,2,3]", "red"));
             Console.WriteLine(SumJson("[1,{\"c\":\"red\",\"b\":2},3]", "red"));

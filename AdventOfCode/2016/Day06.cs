@@ -6,13 +6,13 @@ namespace AdventOfCode._2016
 {
     internal class Day06 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetRepetitionCode(0, "practice"));
             Console.WriteLine(GetRepetitionCode(0));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetRepetitionCode(-1, "practice"));
             Console.WriteLine(GetRepetitionCode(-1));

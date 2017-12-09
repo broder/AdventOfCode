@@ -5,7 +5,7 @@ namespace AdventOfCode._2017
 {
     internal class Day01 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(SumNextMatched("1122"));
             Console.WriteLine(SumNextMatched("1111"));
@@ -23,7 +23,7 @@ namespace AdventOfCode._2017
                 .Sum(c => (int) char.GetNumericValue(c));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(SumMidMatched("1212"));
             Console.WriteLine(SumMidMatched("1221"));

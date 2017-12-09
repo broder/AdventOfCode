@@ -6,7 +6,7 @@ namespace AdventOfCode._2017
 {
     internal class Day07 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetBottomProgram(LoadInput("practice")));
             Console.WriteLine(GetBottomProgram(LoadInput()));
@@ -45,7 +45,7 @@ namespace AdventOfCode._2017
             return parsedPrograms;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetModeChildWeight(LoadInput("practice")));
             Console.WriteLine(GetModeChildWeight(LoadInput()));

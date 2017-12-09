@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day01 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetFloor("(())"));
             Console.WriteLine(GetFloor("()()"));
@@ -38,7 +38,7 @@ namespace AdventOfCode._2015
             return floor;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetBasementPosition(")"));
             Console.WriteLine(GetBasementPosition("()())"));

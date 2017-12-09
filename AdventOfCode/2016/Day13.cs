@@ -8,7 +8,7 @@ namespace AdventOfCode._2016
     {
         private readonly Point[] Moves = {new Point(1, 0), new Point(-1, 0), new Point(0, 1), new Point(0, -1)};
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMinimumSteps(10, new Point(7, 4)));
             Console.WriteLine(GetMinimumSteps(1350, new Point(31, 39)));
@@ -71,7 +71,7 @@ namespace AdventOfCode._2016
             return map;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMaxVisited(1350, 50));
         }

@@ -6,7 +6,7 @@ namespace AdventOfCode._2016
 {
     internal class Day08 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(CountLitScreenPixels(7, 3, "practice"));
             Console.WriteLine(CountLitScreenPixels(50, 6));
@@ -85,7 +85,7 @@ namespace AdventOfCode._2016
                     screen[r, c] = true;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(PrintScreenPixels(50, 6));
         }

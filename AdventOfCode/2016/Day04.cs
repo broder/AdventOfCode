@@ -6,7 +6,7 @@ namespace AdventOfCode._2016
 {
     internal class Day04 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(new Room("aaaaa-bbb-z-y-x-123[abxyz]").IsRealRoom());
             Console.WriteLine(new Room("a-b-c-d-e-f-g-h-987[abcde]").IsRealRoom());
@@ -20,7 +20,7 @@ namespace AdventOfCode._2016
             return LoadInput().Select(s => new Room(s)).Where(r => r.IsRealRoom()).Sum(r => r.GetSectorId());
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(new Room("qzmt-zixmtkozy-ivhz-343[zimth]").GetDecryptedName());
             Console.WriteLine(GetDecryptedNamesFromFile());

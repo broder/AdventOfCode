@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day11 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(IsValidPassword("hijklmmn"));
             Console.WriteLine(IsValidPassword("abbceffg"));
@@ -53,7 +53,7 @@ namespace AdventOfCode._2015
                    doubles.Count(password.Contains) >= 2;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetNextValidPassword("hepxxyzz"));
         }

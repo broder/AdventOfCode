@@ -4,12 +4,12 @@ namespace AdventOfCode._2016
 {
     internal class Day25 : AssemBunnyDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetAlternatingRegisterValue());
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
         }
 

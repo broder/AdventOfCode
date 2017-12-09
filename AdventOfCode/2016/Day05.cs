@@ -6,13 +6,13 @@ namespace AdventOfCode._2016
 {
     internal class Day05 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetPassword("abc"));
             Console.WriteLine(GetPassword("ffykfhsq"));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetPasswordWIthComputedIndex("abc"));
             Console.WriteLine(GetPasswordWIthComputedIndex("ffykfhsq"));

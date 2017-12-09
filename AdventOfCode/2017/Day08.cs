@@ -7,13 +7,13 @@ namespace AdventOfCode._2017
 {
     internal class Day08 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMaxValueFromSimulation(LoadInput("practice")));
             Console.WriteLine(GetMaxValueFromSimulation(LoadInput()));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMaxValueFromSimulation(LoadInput("practice"), true));
             Console.WriteLine(GetMaxValueFromSimulation(LoadInput(), true));

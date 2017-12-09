@@ -6,8 +6,7 @@ namespace AdventOfCode._2016
 {
     internal class Day09 : BaseDay
     {
-
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetCharCount("ADVENT"));
             Console.WriteLine(GetCharCount("A(1x5)BC"));
@@ -56,7 +55,7 @@ namespace AdventOfCode._2016
             return output;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetCharCount("(3x3)XYZ", true));
             Console.WriteLine(GetCharCount("X(8x2)(3x3)ABCY", true));

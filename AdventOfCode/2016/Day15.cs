@@ -7,7 +7,7 @@ namespace AdventOfCode._2016
 {
     internal class Day15 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetFallTime("practice"));
             Console.WriteLine(GetFallTime("1"));
@@ -40,7 +40,7 @@ namespace AdventOfCode._2016
             return true;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetFallTime("2"));
         }

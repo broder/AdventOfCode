@@ -6,13 +6,13 @@ namespace AdventOfCode._2016
 {
     internal class Day16 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetChecksumForData("10000", 20));
             Console.WriteLine(GetChecksumForData("01000100010010111", 272));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetChecksumForData("01000100010010111", 35651584));
         }

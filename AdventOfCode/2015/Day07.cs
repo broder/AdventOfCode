@@ -14,7 +14,7 @@ namespace AdventOfCode._2015
         private readonly Regex NotRegex = new Regex(@"NOT (.+) -> (.+)");
         private readonly Regex SetRegex = new Regex(@"(.+) -> (.+)");
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetWireOutputFromFile("d", "practice"));
             Console.WriteLine(GetWireOutputFromFile("e", "practice"));
@@ -100,7 +100,7 @@ namespace AdventOfCode._2015
             return values[input];
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetWireOutputFromFileWithExtraInput("a", 3176));
         }

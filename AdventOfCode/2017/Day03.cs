@@ -5,7 +5,7 @@ namespace AdventOfCode._2017
 {
     internal class Day03 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetCenterDistanceOnSpiral(1));
             Console.WriteLine(GetCenterDistanceOnSpiral(12));
@@ -27,7 +27,7 @@ namespace AdventOfCode._2017
             return perpendicularDist + tangentialDist;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetSumSpiralNumberAfterValue(277678));
         }

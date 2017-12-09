@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day22 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMinimumManaSpend(new Player {HitPoints = 10, Mana = 250},
                 new Boss {HitPoints = 13, Damage = 8}));
@@ -127,7 +127,7 @@ namespace AdventOfCode._2015
             return -1;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMinimumManaSpend(new Player {HitPoints = 50, Mana = 500},
                 new Boss {HitPoints = 58, Damage = 9}, true));

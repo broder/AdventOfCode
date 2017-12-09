@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day17 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetContainerCombinationsFromFile(25, "practice"));
             Console.WriteLine(GetContainerCombinationsFromFile(150));
@@ -20,7 +20,7 @@ namespace AdventOfCode._2015
                 .Count(c => c.Sum() == totalLiters);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMinimumContainerCombinationsFromFile(25, "practice"));
             Console.WriteLine(GetMinimumContainerCombinationsFromFile(150));

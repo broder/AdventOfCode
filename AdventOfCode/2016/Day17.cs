@@ -8,7 +8,7 @@ namespace AdventOfCode._2016
     {
         private static readonly char[] DoorCharacters = {'b', 'c', 'd', 'e', 'f'};
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetShortestPath("ihgpwlah"));
             Console.WriteLine(GetShortestPath("kglvqrro"));
@@ -76,7 +76,7 @@ namespace AdventOfCode._2016
             }
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetLongestPathLength("ihgpwlah"));
             Console.WriteLine(GetLongestPathLength("kglvqrro"));

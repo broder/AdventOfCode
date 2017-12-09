@@ -7,7 +7,7 @@ namespace AdventOfCode._2015
 {
     internal class Day24 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetFirstQuantumEntaglement(3, "practice"));
             Console.WriteLine(GetFirstQuantumEntaglement(3));
@@ -36,7 +36,7 @@ namespace AdventOfCode._2015
                 .FirstOrDefault(combinations => combinations.Any(p => p.Sum() == sum));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetFirstQuantumEntaglement(4, "practice"));
             Console.WriteLine(GetFirstQuantumEntaglement(4));

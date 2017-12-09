@@ -9,7 +9,7 @@ namespace AdventOfCode._2015
         private readonly Regex ToggleRegex = new Regex(@"toggle (\d*),(\d*) through (\d*),(\d*)");
         private readonly Regex TurnOffRegex = new Regex(@"turn off (\d*),(\d*) through (\d*),(\d*)");
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(CountLights(new[] {"turn on 0,0 through 999,999"}));
             Console.WriteLine(CountLights(new[] {"toggle 0,0 through 999,0"}));
@@ -80,7 +80,7 @@ namespace AdventOfCode._2015
             return points;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetBrightness(new[] {"turn on 0,0 through 0,0"}));
             Console.WriteLine(GetBrightness(new[] {"toggle 0,0 through 999,999"}));

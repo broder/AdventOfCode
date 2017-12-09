@@ -5,7 +5,7 @@ namespace AdventOfCode._2016
 {
     internal class Day20 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetFirstAllowedIp("practice"));
             Console.WriteLine(GetFirstAllowedIp());
@@ -29,7 +29,7 @@ namespace AdventOfCode._2016
             return minAllowed;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(CountAllowedIps("practice"));
             Console.WriteLine(CountAllowedIps());

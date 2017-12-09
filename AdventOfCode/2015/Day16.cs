@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day16 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetSue(MatchesTickerExactly));
         }
@@ -41,7 +41,7 @@ namespace AdventOfCode._2015
                 .All(compound => sue[compound.Key] == compound.Value);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetSue(MatchesTickerRange));
         }

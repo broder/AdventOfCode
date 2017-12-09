@@ -7,7 +7,7 @@ namespace AdventOfCode._2016
         private string Input =
             ".^^^^^.^^^..^^^^^...^.^..^^^.^^....^.^...^^^...^^^^..^...^...^^.^.^.......^..^^...^.^.^^..^^^^^...^.";
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetSafeTiles("..^^.", 3));
             Console.WriteLine(GetSafeTiles(".^^.^.^^^^", 10));
@@ -41,7 +41,7 @@ namespace AdventOfCode._2016
             return safeTiles;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetSafeTiles(Input, 400000));
         }

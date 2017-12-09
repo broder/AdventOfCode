@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day09 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetTripDistance(3, Math.Min, "practice"));
             Console.WriteLine(GetTripDistance(8, Math.Min));
@@ -50,7 +50,7 @@ namespace AdventOfCode._2015
             return nullIndex;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetTripDistance(3, Math.Max, "practice"));
             Console.WriteLine(GetTripDistance(8, Math.Max));

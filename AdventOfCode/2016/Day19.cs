@@ -4,7 +4,7 @@ namespace AdventOfCode._2016
 {
     internal class Day19 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetWinningElf(5));
             Console.WriteLine(GetWinningElf(3018458));
@@ -52,7 +52,7 @@ namespace AdventOfCode._2016
             return current.Index + 1;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetWinningElf(5, true));
             Console.WriteLine(GetWinningElf(3018458, true));

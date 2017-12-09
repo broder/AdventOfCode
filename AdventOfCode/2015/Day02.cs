@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day02 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetArea("2x3x4"));
             Console.WriteLine(GetArea("1x1x10"));
@@ -27,7 +27,7 @@ namespace AdventOfCode._2015
             return 2 * side1 + 2 * side2 + 2 * side3 + Math.Min(Math.Min(side1, side2), side3);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetRibbonLength("2x3x4"));
             Console.WriteLine(GetRibbonLength("1x1x10"));

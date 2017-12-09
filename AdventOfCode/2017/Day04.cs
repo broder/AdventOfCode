@@ -7,7 +7,7 @@ namespace AdventOfCode._2017
 {
     internal class Day04 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(IsValidPassword("aa bb cc dd ee"));
             Console.WriteLine(IsValidPassword("aa bb cc dd aa"));
@@ -15,7 +15,7 @@ namespace AdventOfCode._2017
             Console.WriteLine(LoadInput().Count(s => IsValidPassword(s)));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(IsValidPassword("abcde fghij", true));
             Console.WriteLine(IsValidPassword("abcde xyz ecdab", true));

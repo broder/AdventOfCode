@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day05 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(IsNice("ugknbfddgicrmopn"));
             Console.WriteLine(IsNice("aaa"));
@@ -29,7 +29,7 @@ namespace AdventOfCode._2015
             return ruleOne.IsMatch(input) && ruleTwo.IsMatch(input) && !ruleThree.IsMatch(input);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(IsNiceRevised("qjhvhtzxzqqjkmpb"));
             Console.WriteLine(IsNiceRevised("xxyxx"));

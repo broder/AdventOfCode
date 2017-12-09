@@ -15,7 +15,7 @@ namespace AdventOfCode._2016
         private Dictionary<int, Bot> Bots;
         private Dictionary<int, int> Outputs;
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             SetupBots("practice");
             RunSimulation(2, 5);
@@ -23,7 +23,7 @@ namespace AdventOfCode._2016
             RunSimulation(17, 61);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(Outputs[0] * Outputs[1] * Outputs[2]);
         }

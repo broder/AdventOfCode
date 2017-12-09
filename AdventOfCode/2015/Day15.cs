@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day15 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetHighestScore("practice"));
             Console.WriteLine(GetHighestScore());
@@ -73,7 +73,7 @@ namespace AdventOfCode._2015
             return ingredients;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetHighestScore("practice", 500));
             Console.WriteLine(GetHighestScore(500));

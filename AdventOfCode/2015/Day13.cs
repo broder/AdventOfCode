@@ -6,7 +6,7 @@ namespace AdventOfCode._2015
 {
     internal class Day13 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetTotalHappiness(4, "practice"));
             Console.WriteLine(GetTotalHappiness(8));
@@ -53,7 +53,7 @@ namespace AdventOfCode._2015
             return nullIndex;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetTotalHappiness(9));
         }

@@ -7,7 +7,7 @@ namespace AdventOfCode._2015
 {
     internal class Day19 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetDistinctMoleculesCount("HOH", "practice"));
             Console.WriteLine(GetDistinctMoleculesCount("HOHOHO", "practice"));
@@ -44,7 +44,7 @@ namespace AdventOfCode._2015
             return molecules.Distinct();
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMinimumSteps("HOH", "practice"));
             Console.WriteLine(GetMinimumSteps("HOHOHO", "practice"));

@@ -4,7 +4,7 @@ namespace AdventOfCode._2015
 {
     internal class Day20 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetFirstHouseWithPresents(30));
             Console.WriteLine(GetFirstHouseWithPresents(40));
@@ -37,7 +37,7 @@ namespace AdventOfCode._2015
             return -1;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetFirstHouseWithPresents(36000000, 50));
         }

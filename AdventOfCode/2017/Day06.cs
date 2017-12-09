@@ -6,7 +6,7 @@ namespace AdventOfCode._2017
 {
     internal class Day06 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(CalculateReallocation(new[] {0, 2, 7, 0}));
             Console.WriteLine(CalculateReallocation(LoadInput().First().Split('	').Select(int.Parse).ToArray()));
@@ -47,7 +47,7 @@ namespace AdventOfCode._2017
             return seenStates.Count;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(CalculateReallocation(new[] {2, 4, 1, 2}, true));
             Console.WriteLine(CalculateReallocation(LoadInput().First().Split('	').Select(int.Parse).ToArray(), true));

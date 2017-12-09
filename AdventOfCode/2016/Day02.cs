@@ -21,13 +21,13 @@ namespace AdventOfCode._2016
             {0, 0, 13, 0, 0}
         };
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(NavigateKeypad(PartOneKeypad, "practice"));
             Console.WriteLine(NavigateKeypad(PartOneKeypad));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(NavigateKeypad(PartTwoKeypad, "practice"));
             Console.WriteLine(NavigateKeypad(PartTwoKeypad));

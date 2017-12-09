@@ -5,7 +5,7 @@ namespace AdventOfCode._2017
 {
     internal class Day05 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetSteps(new[] {0, 3, 0, 1, -3}));
             Console.WriteLine(GetSteps(LoadInput().Select(int.Parse).ToArray()));
@@ -32,7 +32,7 @@ namespace AdventOfCode._2017
             return steps;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetSteps(new[] {0, 3, 0, 1, -3}, true));
             Console.WriteLine(GetSteps(LoadInput().Select(int.Parse).ToArray(), true));

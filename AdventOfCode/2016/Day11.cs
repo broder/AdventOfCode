@@ -10,13 +10,13 @@ namespace AdventOfCode._2016
         private readonly Regex MicrochipRegex = new Regex(@"an? ([a-z]*)-compatible microchip");
         private readonly Regex GeneratorRegex = new Regex(@"an? ([a-z]*) generator");
 
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMinimumSteps("practice"));
             Console.WriteLine(GetMinimumSteps("1"));
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMinimumSteps("2"));
         }

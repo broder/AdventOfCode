@@ -6,7 +6,7 @@ namespace AdventOfCode._2016
 {
     internal class Day01 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetBlocksAway("R2, L3"));
             Console.WriteLine(GetBlocksAway("R2, R2, R2"));
@@ -62,7 +62,7 @@ namespace AdventOfCode._2016
             return Math.Abs(avenuesAway) + Math.Abs(streetsAway);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetBlocksAway("R8, R4, R4, R8", true));
             Console.WriteLine(GetIntersectionBlocksAwayFromFile());

@@ -6,7 +6,7 @@ namespace AdventOfCode._2017
 {
     internal class Day02 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMinMaxChecksum(LoadInput("1.practice")));
             Console.WriteLine(GetMinMaxChecksum(LoadInput()));
@@ -29,7 +29,7 @@ namespace AdventOfCode._2017
                 });
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetDivisibleChecksum(LoadInput("2.practice")));
             Console.WriteLine(GetDivisibleChecksum(LoadInput()));

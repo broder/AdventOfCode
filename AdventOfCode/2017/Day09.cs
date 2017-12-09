@@ -7,7 +7,7 @@ namespace AdventOfCode._2017
 {
     internal class Day09 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetScore("{}"));
             Console.WriteLine(GetScore("{{{}}}"));
@@ -48,7 +48,7 @@ namespace AdventOfCode._2017
             return new Tuple<int, int>(score, garbageCharacters);
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(CountGarbage("<>"));
             Console.WriteLine(CountGarbage("<random characters>"));

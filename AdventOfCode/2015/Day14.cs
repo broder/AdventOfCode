@@ -5,7 +5,7 @@ namespace AdventOfCode._2015
 {
     internal class Day14 : BaseDay
     {
-        public override void RunPartOne()
+        protected override void RunPartOne()
         {
             Console.WriteLine(GetMaximumDistance(1000, "practice"));
             Console.WriteLine(GetMaximumDistance(2503));
@@ -52,7 +52,7 @@ namespace AdventOfCode._2015
             return reindeer;
         }
 
-        public override void RunPartTwo()
+        protected override void RunPartTwo()
         {
             Console.WriteLine(GetMaximumPoints(1000, "practice"));
             Console.WriteLine(GetMaximumPoints(2503));
