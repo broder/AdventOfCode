@@ -110,6 +110,7 @@
     <Compile Include="2017\Day08.cs" />
     <Compile Include="2017\Day09.cs" />
     <Compile Include="2017\Day10.cs" />
+    <Compile Include="2017\Day11.cs" />
     <Compile Include="BaseDay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +198,7 @@
     <Content Include="2017\Input\day08.txt" />
     <Content Include="2017\Input\day09.txt" />
     <Content Include="2017\Input\day10.txt" />
+    <Content Include="2017\Input\day11.txt" />
     <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
