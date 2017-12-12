@@ -94,6 +94,7 @@
     <Content Include="2017\Day09.md" />
     <Content Include="2017\Day10.md" />
     <Content Include="2017\Day11.md" />
+    <Content Include="2017\Day12.md" />
     <Content Include="main.js" />
     <Content Include="package.json" />
   </ItemGroup>
