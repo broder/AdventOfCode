@@ -112,6 +112,7 @@
     <Compile Include="2017\Day10.cs" />
     <Compile Include="2017\Day11.cs" />
     <Compile Include="2017\Day12.cs" />
+    <Compile Include="2017\Day13.cs" />
     <Compile Include="BaseDay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +203,8 @@
     <Content Include="2017\Input\day11.txt" />
     <Content Include="2017\Input\day12.practice.txt" />
     <Content Include="2017\Input\day12.txt" />
+    <Content Include="2017\Input\day13.practice.txt" />
+    <Content Include="2017\Input\day13.txt" />
     <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
