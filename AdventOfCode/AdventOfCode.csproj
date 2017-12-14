@@ -113,6 +113,7 @@
     <Compile Include="2017\Day11.cs" />
     <Compile Include="2017\Day12.cs" />
     <Compile Include="2017\Day13.cs" />
+    <Compile Include="2017\Day14.cs" />
     <Compile Include="BaseDay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

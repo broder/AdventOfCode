@@ -69,7 +69,7 @@ namespace AdventOfCode._2017
             Console.WriteLine(GetKnotHash(LoadInput().First()));
         }
 
-        private static string GetKnotHash(string input)
+        public static string GetKnotHash(string input)
         {
             var lengths = GetLengths(input);
             var list = RunSimulation(256, lengths, 64);
