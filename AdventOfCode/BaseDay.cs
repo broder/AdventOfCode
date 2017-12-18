@@ -45,10 +45,9 @@ namespace AdventOfCode
             return File.ReadAllLines($"{Directory.GetCurrentDirectory()}/../../{CurrentYear}/Input/{filename}");
         }
 
-        protected static int Mod(int x, int m)
-        {
-            return (x % m + m) % m;
-        }
+        protected static int Mod(int x, int m) => (x % m + m) % m;
+
+        protected static long Mod(long x, long m) => (x % m + m) % m;
 
         private readonly MD5 Md5 = MD5.Create();
 
