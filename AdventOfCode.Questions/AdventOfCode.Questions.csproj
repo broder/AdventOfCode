@@ -105,6 +105,7 @@
     <Content Include="2017\Day20.md" />
     <Content Include="2017\Day21.md" />
     <Content Include="2017\Day22.md" />
+    <Content Include="2017\Day23.md" />
     <Content Include="main.js" />
     <Content Include="package.json" />
   </ItemGroup>
