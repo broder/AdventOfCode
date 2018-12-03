@@ -42,7 +42,7 @@ namespace AdventOfCode
             if (!string.IsNullOrWhiteSpace(variant))
                 filenameParts.Insert(1, $".{variant}");
             var filename = string.Join("", filenameParts);
-            return File.ReadAllLines($"{Directory.GetCurrentDirectory()}/../../{CurrentYear}/Input/{filename}");
+            return File.ReadAllLines($"{Directory.GetCurrentDirectory()}/{CurrentYear}/Input/{filename}");
         }
 
         protected static int Mod(int x, int m) => (x % m + m) % m;
