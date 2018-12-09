@@ -16,7 +16,7 @@ namespace AdventOfCode._2017
         private static int GetFirstTwoMultiplied(int size, IEnumerable<int> lengths)
         {
             var list = RunSimulation(size, lengths);
-            return list.First.Value * GetNextNode(list.First).Value;
+            return list.First.Value * GetNextCircularNode(list.First).Value;
         }
 
         private static LinkedList<int> RunSimulation(int size, IEnumerable<int> lengths, int rounds = 1)
@@ -32,8 +32,8 @@ namespace AdventOfCode._2017
                 {
                     var lengthFirst = current;
                     for (var i = 0; i < length; i++)
-                        current = GetNextNode(current);
-                    var lengthLast = GetPreviousNode(current);
+                        current = GetNextCircularNode(current);
+                    var lengthLast = GetPreviousCircularNode(current);
 
                     for (var i = 0; i < length / 2; i++)
                     {
@@ -41,22 +41,19 @@ namespace AdventOfCode._2017
                         lengthFirst.Value = lengthLast.Value;
                         lengthLast.Value = temp;
 
-                        lengthFirst = GetNextNode(lengthFirst);
-                        lengthLast = GetPreviousNode(lengthLast);
+                        lengthFirst = GetNextCircularNode(lengthFirst);
+                        lengthLast = GetPreviousCircularNode(lengthLast);
                     }
 
                     for (var i = 0; i < skip; i++)
-                        current = GetNextNode(current);
+                        current = GetNextCircularNode(current);
                     skip++;
                 }
             }
             return list;
         }
 
-        private static LinkedListNode<int> GetNextNode(LinkedListNode<int> n) => n.Next ?? n.List.First;
-
-        private static LinkedListNode<int> GetPreviousNode(LinkedListNode<int> n) => n.Previous ?? n.List.Last;
-
+        
         protected override void RunPartTwo()
         {
             Console.WriteLine(string.Join(",", GetLengths("1,2,3")));

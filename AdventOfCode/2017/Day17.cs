@@ -20,16 +20,14 @@ namespace AdventOfCode._2017
             for (var i = 1; i <= size; i++)
             {
                 for (var j = 0; j < step; j++)
-                    current = GetNextNode(current);
+                    current = GetNextCircularNode(current);
 
                 var next = new LinkedListNode<int>(i);
                 list.AddAfter(current, next);
                 current = next;
             }
-            return GetNextNode(current).Value;
+            return GetNextCircularNode(current).Value;
         }
-
-        private static LinkedListNode<int> GetNextNode(LinkedListNode<int> node) => node.Next ?? node.List.First;
 
         protected override void RunPartTwo()
         {
