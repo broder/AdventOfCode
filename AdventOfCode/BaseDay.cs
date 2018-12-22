@@ -65,6 +65,9 @@ namespace AdventOfCode
 
         protected struct Point
         {
+            public static readonly Point[] ManhattanDirections =
+                {new Point(0, -1), new Point(-1, 0), new Point(1, 0), new Point(0, 1)};
+
             public Point(int x, int y)
             {
                 X = x;
@@ -97,7 +100,7 @@ namespace AdventOfCode
                 return new Point(X + p.X, Y + p.Y);
             }
         }
-        
+
         protected static LinkedListNode<T> GetNextCircularNode<T>(LinkedListNode<T> n) => n.Next ?? n.List.First;
 
         protected static LinkedListNode<T> GetPreviousCircularNode<T>(LinkedListNode<T> n) => n.Previous ?? n.List.Last;
