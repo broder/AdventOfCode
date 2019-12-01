@@ -23,7 +23,7 @@ turndownService.addRule('hidden-span', {
 
 let base = Promise.resolve();
 
-for (let year = 2015; year <= 2018; year++) {
+for (let year = 2015; year <= 2019; year++) {
     const yearPath = `./${year}`;
     base = base.then(() => {
         return fs.pathExists(yearPath);
