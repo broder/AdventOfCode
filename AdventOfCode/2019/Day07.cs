@@ -15,11 +15,11 @@ namespace AdventOfCode._2019
             Console.WriteLine(FindMaxAmpOutput(LoadInput().First()));
         }
 
-        private static int FindMaxAmpOutput(string opcodeString)
+        private static long FindMaxAmpOutput(string opcodeString)
         {
             var opcodes = ParseOpcodesFromString(opcodeString);
 
-            var maxOutput = 0;
+            var maxOutput = 0L;
             for (var amp1Seed = 0; amp1Seed <= 4; amp1Seed++)
             for (var amp2Seed = 0; amp2Seed <= 4; amp2Seed++)
             for (var amp3Seed = 0; amp3Seed <= 4; amp3Seed++)
@@ -28,15 +28,15 @@ namespace AdventOfCode._2019
             {
                 if (new[] {amp1Seed, amp2Seed, amp3Seed, amp4Seed, amp5Seed}.ToHashSet().Count != 5) continue;
 
-                var amp1Output = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp1Seed).SendInput(0).Run()
+                var amp1Output = new OpcodeVM(opcodes).SendInput(amp1Seed).SendInput(0).Run()
                     .GetOutputs().First();
-                var amp2Output = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp2Seed).SendInput(amp1Output).Run()
+                var amp2Output = new OpcodeVM(opcodes).SendInput(amp2Seed).SendInput(amp1Output).Run()
                     .GetOutputs().First();
-                var amp3Output = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp3Seed).SendInput(amp2Output).Run()
+                var amp3Output = new OpcodeVM(opcodes).SendInput(amp3Seed).SendInput(amp2Output).Run()
                     .GetOutputs().First();
-                var amp4Output = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp4Seed).SendInput(amp3Output).Run()
+                var amp4Output = new OpcodeVM(opcodes).SendInput(amp4Seed).SendInput(amp3Output).Run()
                     .GetOutputs().First();
-                var amp5Output = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp5Seed).SendInput(amp4Output).Run()
+                var amp5Output = new OpcodeVM(opcodes).SendInput(amp5Seed).SendInput(amp4Output).Run()
                     .GetOutputs().First();
 
                 maxOutput = Math.Max(maxOutput, amp5Output);
@@ -55,11 +55,11 @@ namespace AdventOfCode._2019
             Console.WriteLine(FindMaxAmpOutputWithFeedback(LoadInput().First()));
         }
 
-        private static int FindMaxAmpOutputWithFeedback(string opcodeString)
+        private static long FindMaxAmpOutputWithFeedback(string opcodeString)
         {
             var opcodes = ParseOpcodesFromString(opcodeString);
 
-            var maxOutput = 0;
+            var maxOutput = 0L;
             for (var amp1Seed = 5; amp1Seed <= 9; amp1Seed++)
             for (var amp2Seed = 5; amp2Seed <= 9; amp2Seed++)
             for (var amp3Seed = 5; amp3Seed <= 9; amp3Seed++)
@@ -68,13 +68,13 @@ namespace AdventOfCode._2019
             {
                 if (new[] {amp1Seed, amp2Seed, amp3Seed, amp4Seed, amp5Seed}.ToHashSet().Count != 5) continue;
 
-                var amp1VM = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp1Seed);
-                var amp2VM = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp2Seed);
-                var amp3VM = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp3Seed);
-                var amp4VM = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp4Seed);
-                var amp5VM = new OpcodeVM((int[]) opcodes.Clone()).SendInput(amp5Seed);
+                var amp1VM = new OpcodeVM(opcodes).SendInput(amp1Seed);
+                var amp2VM = new OpcodeVM(opcodes).SendInput(amp2Seed);
+                var amp3VM = new OpcodeVM(opcodes).SendInput(amp3Seed);
+                var amp4VM = new OpcodeVM(opcodes).SendInput(amp4Seed);
+                var amp5VM = new OpcodeVM(opcodes).SendInput(amp5Seed);
 
-                var amp5Output = 0;
+                var amp5Output = 0L;
 
                 while (!amp5VM.IsFinished())
                 {

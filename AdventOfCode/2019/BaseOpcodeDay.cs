@@ -6,38 +6,40 @@ namespace AdventOfCode._2019
 {
     internal abstract class BaseOpcodeDay : BaseDay
     {
-        protected static int[] ParseOpcodesFromString(string opcodesString) =>
-            opcodesString.Split(",").Select(int.Parse).ToArray();
+        protected static long[] ParseOpcodesFromString(string opcodesString) =>
+            opcodesString.Split(",").Select(long.Parse).ToArray();
 
         protected class OpcodeVM
         {
-            private readonly int[] Opcodes;
-            private int CurrentIndex;
+            private readonly long[] Memory = new long[2000];
+            private long CurrentIndex;
+            private long RelativeBase;
             private bool Finished;
-            private readonly Queue<int> Inputs = new Queue<int>();
-            private readonly List<int> Outputs = new List<int>();
+            private readonly Queue<long> Inputs = new Queue<long>();
+            private readonly List<long> Outputs = new List<long>();
 
             public OpcodeVM(string opcodeString) :
                 this(ParseOpcodesFromString(opcodeString))
             {
             }
 
-            public OpcodeVM(int[] opcodes)
+            public OpcodeVM(long[] opcodes)
             {
-                Opcodes = opcodes;
+                for (var i = 0; i < opcodes.Length; i++)
+                    Memory[i] = opcodes[i];
             }
 
-            public int[] GetOpcodes() => Opcodes;
+            public long[] GetMemory() => Memory;
 
-            public void PrintOpcodes() => Console.WriteLine(string.Join(",", GetOpcodes()));
-
-            public OpcodeVM SendInput(int input)
+            public OpcodeVM SendInput(long input)
             {
                 Inputs.Enqueue(input);
                 return this;
             }
 
-            public List<int> GetOutputs() => Outputs;
+            public List<long> GetOutputs() => Outputs;
+
+            public void PrintOutputs() => Console.WriteLine(string.Join(",", GetOutputs()));
 
             public bool IsFinished() => Finished;
 
@@ -45,63 +47,55 @@ namespace AdventOfCode._2019
             {
                 while (!Finished)
                 {
-                    var instruction = Opcodes[CurrentIndex];
+                    var instruction = Memory[CurrentIndex];
                     var opcode = instruction % 100;
-                    var firstParameterMode = (instruction % 1000) / 100;
-                    var firstParameterIndex =
-                        firstParameterMode == 0 && CurrentIndex + 1 < Opcodes.Length
-                            ? Opcodes[CurrentIndex + 1]
-                            : CurrentIndex + 1;
-                    var secondParameterMode = (instruction % 10000) / 1000;
-                    var secondParameterIndex =
-                        secondParameterMode == 0 && CurrentIndex + 2 < Opcodes.Length
-                            ? Opcodes[CurrentIndex + 2]
-                            : CurrentIndex + 2;
-                    var thirdParameterMode = instruction / 10000;
-                    var thirdParameterIndex =
-                        thirdParameterMode == 0 && CurrentIndex + 3 < Opcodes.Length
-                            ? Opcodes[CurrentIndex + 3]
-                            : CurrentIndex + 3;
+                    var firstParameterIndex = GetParameterIndex(instruction / 100 % 10, CurrentIndex + 1);
+                    var secondParameterIndex = GetParameterIndex(instruction / 1000 % 10, CurrentIndex + 2);
+                    var thirdParameterIndex = GetParameterIndex(instruction / 10000, CurrentIndex + 3);
                     switch (opcode)
                     {
                         case 1:
-                            Opcodes[thirdParameterIndex] = Opcodes[firstParameterIndex] + Opcodes[secondParameterIndex];
+                            Memory[thirdParameterIndex] = Memory[firstParameterIndex] + Memory[secondParameterIndex];
                             CurrentIndex += 4;
                             break;
                         case 2:
-                            Opcodes[thirdParameterIndex] = Opcodes[firstParameterIndex] * Opcodes[secondParameterIndex];
+                            Memory[thirdParameterIndex] = Memory[firstParameterIndex] * Memory[secondParameterIndex];
                             CurrentIndex += 4;
                             break;
                         case 3:
                             if (Inputs.Count == 0) return this;
-                            Opcodes[firstParameterIndex] = Inputs.Dequeue();
+                            Memory[firstParameterIndex] = Inputs.Dequeue();
                             CurrentIndex += 2;
                             break;
                         case 4:
-                            Outputs.Add(Opcodes[firstParameterIndex]);
+                            Outputs.Add(Memory[firstParameterIndex]);
                             CurrentIndex += 2;
                             break;
                         case 5:
-                            if (Opcodes[firstParameterIndex] != 0)
-                                CurrentIndex = Opcodes[secondParameterIndex];
+                            if (Memory[firstParameterIndex] != 0)
+                                CurrentIndex = Memory[secondParameterIndex];
                             else
                                 CurrentIndex += 3;
                             break;
                         case 6:
-                            if (Opcodes[firstParameterIndex] == 0)
-                                CurrentIndex = Opcodes[secondParameterIndex];
+                            if (Memory[firstParameterIndex] == 0)
+                                CurrentIndex = Memory[secondParameterIndex];
                             else
                                 CurrentIndex += 3;
                             break;
                         case 7:
-                            Opcodes[thirdParameterIndex] =
-                                Opcodes[firstParameterIndex] < Opcodes[secondParameterIndex] ? 1 : 0;
+                            Memory[thirdParameterIndex] =
+                                Memory[firstParameterIndex] < Memory[secondParameterIndex] ? 1 : 0;
                             CurrentIndex += 4;
                             break;
                         case 8:
-                            Opcodes[thirdParameterIndex] =
-                                Opcodes[firstParameterIndex] == Opcodes[secondParameterIndex] ? 1 : 0;
+                            Memory[thirdParameterIndex] =
+                                Memory[firstParameterIndex] == Memory[secondParameterIndex] ? 1 : 0;
                             CurrentIndex += 4;
+                            break;
+                        case 9:
+                            RelativeBase += Memory[firstParameterIndex];
+                            CurrentIndex += 2;
                             break;
                         case 99:
                             Finished = true;
@@ -112,6 +106,21 @@ namespace AdventOfCode._2019
                 }
 
                 return this;
+            }
+
+            private long GetParameterIndex(long mode, long rawIndex)
+            {
+                switch (mode)
+                {
+                    case 0:
+                        return Memory[rawIndex];
+                    case 1:
+                        return rawIndex;
+                    case 2:
+                        return Memory[rawIndex] + RelativeBase;
+                    default:
+                        throw new ArgumentException();
+                }
             }
         }
     }
