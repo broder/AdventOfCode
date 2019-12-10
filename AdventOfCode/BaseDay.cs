@@ -99,10 +99,17 @@ namespace AdventOfCode
             {
                 return new Point(X + p.X, Y + p.Y);
             }
+
+            public Point Subtract(Point p)
+            {
+                return new Point(X - p.X, Y - p.Y);
+            }
         }
 
         protected static LinkedListNode<T> GetNextCircularNode<T>(LinkedListNode<T> n) => n.Next ?? n.List.First;
 
         protected static LinkedListNode<T> GetPreviousCircularNode<T>(LinkedListNode<T> n) => n.Previous ?? n.List.Last;
+
+        protected static int GetGreatestCommonDivisor(int a, int b) => b == 0 ? a : GetGreatestCommonDivisor(b, a % b);
     }
 }
