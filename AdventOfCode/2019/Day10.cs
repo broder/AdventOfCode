@@ -65,7 +65,7 @@ namespace AdventOfCode._2019
             }
             else
             {
-                var gcd = GetGreatestCommonDivisor(diff.X, diff.Y);
+                var gcd = (int)GetGreatestCommonDivisor(diff.X, diff.Y);
                 var xStep = diff.X / gcd;
                 var yStep = diff.Y / gcd;
                 for (var i = 1; i < Math.Abs(gcd); i++)

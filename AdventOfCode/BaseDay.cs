@@ -68,18 +68,20 @@ namespace AdventOfCode
             public static readonly Point[] ManhattanDirections =
                 {new Point(0, -1), new Point(-1, 0), new Point(1, 0), new Point(0, 1)};
 
-            public Point(int x, int y)
+            public Point(int x, int y, int z = 0)
             {
                 X = x;
                 Y = y;
+                Z = z;
             }
 
             public readonly int X;
             public readonly int Y;
+            public readonly int Z;
 
             public bool Equals(Point p)
             {
-                return X == p.X && Y == p.Y;
+                return X == p.X && Y == p.Y && Z == p.Z;
             }
 
             public override bool Equals(object obj)
@@ -91,18 +93,23 @@ namespace AdventOfCode
             {
                 unchecked
                 {
-                    return (X * 397) ^ Y;
+                    return (((X * 397) ^ Y) * 397) ^ Z;
                 }
+            }
+
+            public override string ToString()
+            {
+                return $"{X},{Y},{Z}";
             }
 
             public Point Add(Point p)
             {
-                return new Point(X + p.X, Y + p.Y);
+                return new Point(X + p.X, Y + p.Y, Z + p.Z);
             }
 
             public Point Subtract(Point p)
             {
-                return new Point(X - p.X, Y - p.Y);
+                return new Point(X - p.X, Y - p.Y, Z - p.Z);
             }
         }
 
@@ -110,6 +117,8 @@ namespace AdventOfCode
 
         protected static LinkedListNode<T> GetPreviousCircularNode<T>(LinkedListNode<T> n) => n.Previous ?? n.List.Last;
 
-        protected static int GetGreatestCommonDivisor(int a, int b) => b == 0 ? a : GetGreatestCommonDivisor(b, a % b);
+        protected static long GetGreatestCommonDivisor(long a, long b) => b == 0 ? a : GetGreatestCommonDivisor(b, a % b);
+
+        protected static long GetLowestCommonMultiple(long a, long b) => (a / GetGreatestCommonDivisor(a, b)) * b;
     }
 }
