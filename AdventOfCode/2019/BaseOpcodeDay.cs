@@ -11,20 +11,21 @@ namespace AdventOfCode._2019
 
         protected class OpcodeVM
         {
-            private readonly long[] Memory = new long[2000];
+            private readonly long[] Memory;
             private long CurrentIndex;
             private long RelativeBase;
             private bool Finished;
             private readonly Queue<long> Inputs = new Queue<long>();
             private readonly List<long> Outputs = new List<long>();
 
-            public OpcodeVM(string opcodeString) :
-                this(ParseOpcodesFromString(opcodeString))
+            public OpcodeVM(string opcodeString, int memorySize = 2000) :
+                this(ParseOpcodesFromString(opcodeString), memorySize)
             {
             }
 
-            public OpcodeVM(long[] opcodes)
+            public OpcodeVM(long[] opcodes, int memorySize = 2000)
             {
+                Memory = new long[memorySize];
                 for (var i = 0; i < opcodes.Length; i++)
                     Memory[i] = opcodes[i];
             }
