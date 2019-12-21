@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdventOfCode._2019
 {
-    internal class Day17 : BaseOpcodeDay
+    internal class Day17 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
@@ -20,7 +20,7 @@ namespace AdventOfCode._2019
                 .ToList();
 
         private static List<List<char>> OpcodeToMap(string opcodeString) =>
-            ListToMap(new OpcodeVM(opcodeString, 4000).Run().GetOutputs());
+            ListToMap(new IntcodeVM(opcodeString, 4000).Run().GetOutputs());
 
         private static List<List<char>> ListToMap(List<long> list) => list.Aggregate(
             new List<List<char>> {new List<char>()}, (l, i) =>
@@ -62,17 +62,14 @@ namespace AdventOfCode._2019
 
         private static long GetCollectedSpaceDust(long[] opcodes)
         {
-            var vm = new OpcodeVM(opcodes, 4000).Run();
+            var vm = new IntcodeVM(opcodes, 4000).Run();
             var outputs = vm.GetOutputs();
             var map = ListToMap(outputs);
             outputs.Clear();
             var path = GetPath(map);
             var routine = PathToRoutine(path);
-            foreach (var c in routine)
-                vm.SendInput(c);
 
-
-            vm.SendInput('n').SendInput('\n').Run();
+            vm.SendInput(routine).SendInput("n\n").Run();
             return vm.GetOutputs().Last();
         }
 

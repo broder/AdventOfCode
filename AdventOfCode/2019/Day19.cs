@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day19 : BaseOpcodeDay
+    internal class Day19 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
@@ -15,7 +15,7 @@ namespace AdventOfCode._2019
             var count = 0;
             for (var y = 0; y < 50; y++)
             for (var x = 0; x < 50; x++)
-                if (new OpcodeVM(opcodeString).SendInput(x).SendInput(y).Run().GetOutputs().First() == 1)
+                if (new IntcodeVM(opcodeString).SendInput(x, y).Run().GetOutputs().First() == 1)
                     count++;
 
             return count;
@@ -33,9 +33,9 @@ namespace AdventOfCode._2019
 
             while (true)
             {
-                while (new OpcodeVM(opcodeString).SendInput(x).SendInput(y).Run().GetOutputs().First() == 0) x++;
+                while (new IntcodeVM(opcodeString).SendInput(x, y).Run().GetOutputs().First() == 0) x++;
 
-                if (new OpcodeVM(opcodeString).SendInput(x + 99).SendInput(y - 99).Run().GetOutputs().First() == 1)
+                if (new IntcodeVM(opcodeString).SendInput(x + 99, y - 99).Run().GetOutputs().First() == 1)
                     return x * 10000 + y - 99;
 
                 y++;

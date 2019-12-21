@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day13 : BaseOpcodeDay
+    internal class Day13 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
-            Console.WriteLine(new OpcodeVM(LoadInput().First(), 4000).Run().GetOutputs()
+            Console.WriteLine(new IntcodeVM(LoadInput().First(), 4000).Run().GetOutputs()
                 .Where((t, i) => t == 2 && (i + 1) % 3 == 0).Count());
         }
 
@@ -22,7 +22,7 @@ namespace AdventOfCode._2019
             var opcodes = ParseOpcodesFromString(opcodeString);
             opcodes[0] = 2;
 
-            var vm = new OpcodeVM(opcodes, 4000);
+            var vm = new IntcodeVM(opcodes, 4000);
             var screen = new Dictionary<Point, long>();
 
             while (!vm.IsFinished())

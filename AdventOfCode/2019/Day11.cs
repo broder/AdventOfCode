@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day11 : BaseOpcodeDay
+    internal class Day11 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
@@ -15,7 +15,7 @@ namespace AdventOfCode._2019
 
         private static Dictionary<Point, bool> RunRobot(string opcodeString, bool initialPanelIsWhite = false)
         {
-            var opcodeVM = new OpcodeVM(opcodeString);
+            var opcodeVM = new IntcodeVM(opcodeString);
 
             var directions = new[] {new Point(0, -1), new Point(1, 0), new Point(0, 1), new Point(-1, 0)};
             

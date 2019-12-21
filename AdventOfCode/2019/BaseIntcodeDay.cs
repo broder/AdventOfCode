@@ -4,12 +4,12 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal abstract class BaseOpcodeDay : BaseDay
+    internal abstract class BaseIntcodeDay : BaseDay
     {
         protected static long[] ParseOpcodesFromString(string opcodesString) =>
             opcodesString.Split(",").Select(long.Parse).ToArray();
 
-        protected class OpcodeVM
+        protected class IntcodeVM
         {
             private readonly long[] Memory;
             private long CurrentIndex;
@@ -18,12 +18,12 @@ namespace AdventOfCode._2019
             private readonly Queue<long> Inputs = new Queue<long>();
             private readonly List<long> Outputs = new List<long>();
 
-            public OpcodeVM(string opcodeString, int memorySize = 2000) :
+            public IntcodeVM(string opcodeString, int memorySize = 2000) :
                 this(ParseOpcodesFromString(opcodeString), memorySize)
             {
             }
 
-            public OpcodeVM(long[] opcodes, int memorySize = 2000)
+            public IntcodeVM(long[] opcodes, int memorySize = 2000)
             {
                 Memory = new long[memorySize];
                 for (var i = 0; i < opcodes.Length; i++)
@@ -32,9 +32,17 @@ namespace AdventOfCode._2019
 
             public long[] GetMemory() => Memory;
 
-            public OpcodeVM SendInput(long input)
+            public IntcodeVM SendInput(string input)
             {
-                Inputs.Enqueue(input);
+                foreach (var i in input)
+                    Inputs.Enqueue(i);
+                return this;
+            }
+            
+            public IntcodeVM SendInput(params long[] input)
+            {
+                foreach (var i in input)
+                    Inputs.Enqueue(i);
                 return this;
             }
 
@@ -44,7 +52,7 @@ namespace AdventOfCode._2019
 
             public bool IsFinished() => Finished;
 
-            public OpcodeVM Run()
+            public IntcodeVM Run()
             {
                 while (!Finished)
                 {

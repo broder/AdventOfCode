@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day15 : BaseOpcodeDay
+    internal class Day15 : BaseIntcodeDay
     {
         private const int Floor = 0;
         private const int Wall = 1;
@@ -17,7 +17,7 @@ namespace AdventOfCode._2019
 
         private static int FindMinimumRepairSystemDistance(string opcodeString)
         {
-            var vm = new OpcodeVM(opcodeString, 6000);
+            var vm = new IntcodeVM(opcodeString, 6000);
 
             var start = new Point(0, 0);
             var map = new Dictionary<Point, int> {[start] = Floor};
@@ -28,7 +28,7 @@ namespace AdventOfCode._2019
             return FindMinimumRepairSystemDistance(start, map);
         }
 
-        private static void ComputeMap(OpcodeVM vm, Stack<Point> path, Dictionary<Point, int> map)
+        private static void ComputeMap(IntcodeVM vm, Stack<Point> path, Dictionary<Point, int> map)
         {
             for (var direction = 1; direction <= 4; direction++)
             {
@@ -167,7 +167,7 @@ namespace AdventOfCode._2019
 
         private static int FindMaximumDistance(string opcodeString)
         {
-            var vm = new OpcodeVM(opcodeString, 6000);
+            var vm = new IntcodeVM(opcodeString, 6000);
 
             var start = new Point(0, 0);
             var map = new Dictionary<Point, int> {[start] = Floor};

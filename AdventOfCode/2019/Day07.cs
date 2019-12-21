@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day07 : BaseOpcodeDay
+    internal class Day07 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
@@ -28,15 +28,15 @@ namespace AdventOfCode._2019
             {
                 if (new[] {amp1Seed, amp2Seed, amp3Seed, amp4Seed, amp5Seed}.ToHashSet().Count != 5) continue;
 
-                var amp1Output = new OpcodeVM(opcodes).SendInput(amp1Seed).SendInput(0).Run()
+                var amp1Output = new IntcodeVM(opcodes).SendInput(amp1Seed, 0).Run()
                     .GetOutputs().First();
-                var amp2Output = new OpcodeVM(opcodes).SendInput(amp2Seed).SendInput(amp1Output).Run()
+                var amp2Output = new IntcodeVM(opcodes).SendInput(amp2Seed, amp1Output).Run()
                     .GetOutputs().First();
-                var amp3Output = new OpcodeVM(opcodes).SendInput(amp3Seed).SendInput(amp2Output).Run()
+                var amp3Output = new IntcodeVM(opcodes).SendInput(amp3Seed, amp2Output).Run()
                     .GetOutputs().First();
-                var amp4Output = new OpcodeVM(opcodes).SendInput(amp4Seed).SendInput(amp3Output).Run()
+                var amp4Output = new IntcodeVM(opcodes).SendInput(amp4Seed, amp3Output).Run()
                     .GetOutputs().First();
-                var amp5Output = new OpcodeVM(opcodes).SendInput(amp5Seed).SendInput(amp4Output).Run()
+                var amp5Output = new IntcodeVM(opcodes).SendInput(amp5Seed, amp4Output).Run()
                     .GetOutputs().First();
 
                 maxOutput = Math.Max(maxOutput, amp5Output);
@@ -68,11 +68,11 @@ namespace AdventOfCode._2019
             {
                 if (new[] {amp1Seed, amp2Seed, amp3Seed, amp4Seed, amp5Seed}.ToHashSet().Count != 5) continue;
 
-                var amp1VM = new OpcodeVM(opcodes).SendInput(amp1Seed);
-                var amp2VM = new OpcodeVM(opcodes).SendInput(amp2Seed);
-                var amp3VM = new OpcodeVM(opcodes).SendInput(amp3Seed);
-                var amp4VM = new OpcodeVM(opcodes).SendInput(amp4Seed);
-                var amp5VM = new OpcodeVM(opcodes).SendInput(amp5Seed);
+                var amp1VM = new IntcodeVM(opcodes).SendInput(amp1Seed);
+                var amp2VM = new IntcodeVM(opcodes).SendInput(amp2Seed);
+                var amp3VM = new IntcodeVM(opcodes).SendInput(amp3Seed);
+                var amp4VM = new IntcodeVM(opcodes).SendInput(amp4Seed);
+                var amp5VM = new IntcodeVM(opcodes).SendInput(amp5Seed);
 
                 var amp5Output = 0L;
 

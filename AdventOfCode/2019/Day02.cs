@@ -3,14 +3,14 @@ using System.Linq;
 
 namespace AdventOfCode._2019
 {
-    internal class Day02 : BaseOpcodeDay
+    internal class Day02 : BaseIntcodeDay
     {
         protected override void RunPartOne()
         {
             var opcodes = ParseOpcodesFromString(LoadInput().First());
             opcodes[1] = 12;
             opcodes[2] = 2;
-            Console.WriteLine(new OpcodeVM(opcodes).Run().GetMemory().First());
+            Console.WriteLine(new IntcodeVM(opcodes).Run().GetMemory().First());
         }
 
         protected override void RunPartTwo()
@@ -28,7 +28,7 @@ namespace AdventOfCode._2019
                 {
                     opcodes[1] = noun;
                     opcodes[2] = verb;
-                    if (new OpcodeVM(opcodes).Run().GetMemory().First() == target)
+                    if (new IntcodeVM(opcodes).Run().GetMemory().First() == target)
                     {
                         return (noun, verb);
                     }
