@@ -89,13 +89,7 @@ namespace AdventOfCode
                 return obj?.GetType() == GetType() && Equals((Point) obj);
             }
 
-            public override int GetHashCode()
-            {
-                unchecked
-                {
-                    return (((X * 397) ^ Y) * 397) ^ Z;
-                }
-            }
+            public override int GetHashCode() => new Tuple<int, int, int>(X, Y, Z).GetHashCode();
 
             public override string ToString()
             {
