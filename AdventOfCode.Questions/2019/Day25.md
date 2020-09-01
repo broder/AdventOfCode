@@ -9,7 +9,7 @@ Second, that one faint life signature is somewhere on the ship.
 
 The airlock door is locked with a code; your best option is to send in a small droid to investigate the situation. You attach your ship to Santa's, break a small hole in the hull, and let the droid run in before you seal it up again. Before your ship starts freezing, you detach your ship and set it to automatically stay within range of Santa's ship.
 
-This droid can follow basic instructions and report on its surroundings; you can communicate with it through an [Intcode](9) program (your puzzle input) running on an [ASCII-capable](17) computer.
+This droid can follow basic instructions and report on its surroundings; you can communicate with it through an [Intcode](Day09.md) program (your puzzle input) running on an [ASCII-capable](Day17.md) computer.
 
 As the droid moves through its environment, it will describe what it encounters. When it says `Command?`, you can give it a single instruction terminated with a newline (ASCII code `10`). Possible instructions are:
 

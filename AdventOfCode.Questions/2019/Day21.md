@@ -9,7 +9,7 @@ You can send a droid out to investigate, but the tumbling is causing enough [art
 
 The clear choice for this mission is a droid _(I picture the Bouncy enemy from Kirby games.)_ that can _jump_ over the holes in the hull - a _springdroid_.
 
-You can use an [Intcode](9) program (your puzzle input) running on an [ASCII-capable](17) computer to [program](https://en.wikipedia.org/wiki/Programmable_read-only_memory) the springdroid. However, springdroids don't run Intcode; instead, they run a simplified assembly language called _springscript_.
+You can use an [Intcode](Day09.md) program (your puzzle input) running on an [ASCII-capable](Day17.md) computer to [program](https://en.wikipedia.org/wiki/Programmable_read-only_memory) the springdroid. However, springdroids don't run Intcode; instead, they run a simplified assembly language called _springscript_.
 
 While a springdroid is certainly capable of navigating the artificial gravity and giant holes, it has one downside: it can only remember at most _15_ springscript instructions.
 

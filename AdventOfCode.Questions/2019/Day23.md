@@ -5,7 +5,7 @@ The droids have finished repairing as much of the ship as they can. Their report
 
 You'll need to _rebuild the network from scratch_.
 
-The computers on the network are standard [Intcode](9) computers that communicate by sending _packets_ to each other. There are `50` of them in total, each running a copy of the same _Network Interface Controller_ (NIC) software (your puzzle input). The computers have _network addresses_ `0` through `49`; when each computer boots up, it will request its network address via a single input instruction. Be sure to give each computer a unique network address.
+The computers on the network are standard [Intcode](Day09.md) computers that communicate by sending _packets_ to each other. There are `50` of them in total, each running a copy of the same _Network Interface Controller_ (NIC) software (your puzzle input). The computers have _network addresses_ `0` through `49`; when each computer boots up, it will request its network address via a single input instruction. Be sure to give each computer a unique network address.
 
 Once a computer has received its network address, it will begin doing work and communicating over the network by sending and receiving _packets_. All packets contain _two values_ named `X` and `Y`. Packets sent to a computer are queued by the recipient and read in the order they are received.
 

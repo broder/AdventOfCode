@@ -17,7 +17,7 @@ You call the service number printed on the side of the antenna and quickly expla
 
 You ask if the antenna can handle a clock signal at the frequency you would need to use for the data from the stars. "There's _no way_ it can! The only antenna we've installed capable of _that_ is on top of a top-secret Easter Bunny installation, and you're _definitely_ not-" You hang up the phone.
 
-You've extracted the antenna's clock signal generation [assembunny](12) code (your puzzle input); it looks mostly compatible with code you worked on [just recently](23).
+You've extracted the antenna's clock signal generation [assembunny](Day12.md) code (your puzzle input); it looks mostly compatible with code you worked on [just recently](Day23.md).
 
 This antenna code, being a signal generator, uses one extra instruction:
 
