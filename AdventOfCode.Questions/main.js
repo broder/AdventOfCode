@@ -1,4 +1,4 @@
-const request = require('request-promise-native');
+const fetch = require('node-fetch');
 const jsdom = require('jsdom');
 const TurndownService = require('turndown');
 const fs = require('fs-extra');
@@ -14,7 +14,7 @@ const argv = require('yargs')
     .alias('h', 'help')
     .argv;
 
-const {JSDOM} = jsdom;
+const { JSDOM } = jsdom;
 const turndownService = new TurndownService();
 turndownService.addRule('hidden-span', {
     filter: ['span'],
@@ -55,12 +55,14 @@ for (let year = 2015; year <= 2019; year++) {
 return base;
 
 function fetchQuestion(year, day, path) {
-    return request({
-        headers: {
-            cookie: `session=${argv.session}`
-        },
-        url: `http://adventofcode.com/${year}/day/${day}`
-    })
+    return fetch(
+        `http://adventofcode.com/${year}/day/${day}`,
+        {
+            headers: {
+                cookie: `session=${argv.session}`
+            },
+        })
+        .then(res => res.text())
         .then(html => {
             const dom = new JSDOM(html);
             return [...dom.window.document.querySelectorAll('article.day-desc')]
