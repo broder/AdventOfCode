@@ -9,6 +9,7 @@ namespace AdventOfCode
 {
     internal abstract class BaseDay
     {
+        protected const string HexChars = "0123456789abcdef";
         protected const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
 
         private readonly string CurrentYear;
