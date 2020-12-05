@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>AdventOfCode</AssemblyName>
     <RootNamespace>AdventOfCode</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Combinatorics" Version="1.1.0.19" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="OptimizedPriorityQueue" Version="4.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="OptimizedPriorityQueue" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
