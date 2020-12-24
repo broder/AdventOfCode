@@ -4,7 +4,7 @@
     {
         private static void Main()
         {
-            new _2020.Day23();
+            new _2020.Day24();
         }
     }
 }
